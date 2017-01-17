@@ -1,2 +1,5 @@
 # UofTHacks17-JSabJmeRy
-hehehe
+hehehe let's build some goofy ddong
+
+# === Ideas ===
+

@@ -47,7 +47,6 @@ html, body {
 	font-family:'Open Sans';
 	overflow-x:hidden;
 	position: relative;
-    max-height:100vh !important;
     margin:0 !important;
     padding:0 !important;
 }
@@ -217,7 +216,12 @@ header .intro-text {
 	}
 }
 #wrapper {
-    max-height:99vh !important;
+    /*max-height:99vh !important;*/
+}
+@media (min-width: 992px) {
+    #wrapper {
+        max-height: 99vh;
+    }
 }
 
 .container {

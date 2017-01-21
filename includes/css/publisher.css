@@ -216,7 +216,7 @@ header .intro-text {
 	}
 }
 #wrapper {
-    max-height:200vh !important;
+    max-height:110vh !important;
 }
 @media (min-width: 992px) {
     #wrapper {
@@ -238,6 +238,7 @@ header .intro-text {
 	box-shadow:0 3px 5px rgba(0,0,0,.05);
     padding: 20px 0 0 0;
     height: 80px !important;
+    z-index: 100 !important;
 }
 
 .navbar .navbar-brand {
@@ -263,6 +264,9 @@ header .intro-text {
 
 }
 
+.navbat-default {
+    z-index: 100 !important;
+}
 .navbar-header, .navbar-collapse {
 	margin-top:10px;
 }
@@ -941,27 +945,7 @@ button:focus {
 		width: 80%;
 	}
 }
-/*------------------------------------------------------------------
-[Master Stylesheet]
-
-Project    	: Aether
-Version		: 1.0
-Last change	: 2015/03/27
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-[Table of contents]
-
-1. General Structure
-2. Anchor Link
-3. Text Outside the Box
-4. Main Form
-5. Login Button
-6. Form Invalid
-7. Form - Main Message
-8. Custom Checkbox & Radio
-9. Misc
--------------------------------------------------------------------*/
-/*=== 1. General Structure ===*/
+/*MAIN*/
 html,
 body {
   background: #efefef;
@@ -969,8 +953,8 @@ body {
   font-family: 'Varela Round';
 }
 
-.main {
-    
+/*.main {
+    z-index: 0;
     height: 99vh;
     margin-top: -20px;
     opacity: 0.5;
@@ -981,4 +965,19 @@ body {
     #2d94ce 50%, 
     #2d94ce 100%
   );
+} */
+.main-need-poo {
+    z-index: 100;
+}
+#need-to-poo {
+    background-color: #f66f94;
+    height: 130vh;
+    margin-top: -200px;
+    opacity: 0.5;
+}
+#took-a-poo {
+    background-color: #2d94ce;
+    height: 230vh;
+    margin-top: -200px;
+    opacity: 0.5;
 }

@@ -216,11 +216,11 @@ header .intro-text {
 	}
 }
 #wrapper {
-    /*max-height:99vh !important;*/
+    max-height:200vh !important;
 }
 @media (min-width: 992px) {
     #wrapper {
-        max-height: 99vh;
+        max-height: 120vh;
     }
 }
 
@@ -544,6 +544,23 @@ section.reviews {
 	}
 }
 
+.register-title {
+    margin-bottom: 35px;
+    color: #bababa;
+}
+#lost-title {
+    margin-left: 40px;
+}
+#login-title {
+    margin-left: 15px;
+}
+.form-link {
+    margin-top: 30px;
+    margin-left: 22px;
+}
+.form-link:hover {
+    color: #f66f94;
+}
 /* Review Styles */
 
 .review {
@@ -749,7 +766,7 @@ footer .social a.google-plus:active {color:#dd4b39;}
   padding: 15px 20px;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #91e867;
+  color: #f66f94;
   background-color: #fff;
   background-image: none;
   border: 1px solid #dddddd;
@@ -758,7 +775,7 @@ footer .social a.google-plus:active {color:#dd4b39;}
   transition: all 0.3s ease;
 }
 .form-control:focus {
-  border-color: #91e867;
+  border-color: #96c9e6;
   outline: 0;
 }
 .form-control::-moz-placeholder {

@@ -1,8 +1,7 @@
 var express=require('express');
 var nodemailer = require("nodemailer");
 var app=express();
-var router = express.Router();
-var path = '../../UofTHacks17-JSabJmeRy/';
+
 /*
     Here we are configuring our SMTP Server details.
     STMP is mail server which is responsible for sending and recieving email.
@@ -18,12 +17,6 @@ var rand,mailOptions,host,link;
 /*------------------SMTP Over-----------------------------*/
 
 /*------------------Routing Started ------------------------*/
-router.use(function (req,res,next) {
-  console.log("/" + req.method);
-  next();
-});
-
-app.use("/",router);
 
 app.get('/',function(req,res){
     res.sendFile('index.html', {'root': "../../"});
@@ -58,7 +51,7 @@ app.get('/send',function(req,res){
     host=req.get('host');
     link="http://"+req.get('host')+"/verify?id="+rand;
     mailOptions={
-        to : req.query.to,
+        to : req.query.e,
         subject : "Please confirm your Email account",
         html : "Hello,<br> Please Click on the link to verify your email.<br><a href="+link+">Click here to verify</a>"
     };

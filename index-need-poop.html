@@ -4,7 +4,7 @@
 <!-- University of Toronto Hacks 2017 - Jae Chung, Sabina Shin, Jamie Kim, Ryan Gu - What's in you Fridge?-->
 <head>
 	<meta charset="UTF-8">
-	<title>Jaehyun Chung | Web Layout Bruh</title>
+	<title>poopnplop</title>
 	<link rel="stylesheet" type="text/css" href="includes/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="includes/css/bootstrap.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,11 +50,15 @@
                 <div id="map" style="width:100%;height:75%"></div>
             </div>
             <div class="col-md-6" id="took-a-poo-map">
-                
-            </div>
+                <img class="washroom-top" src="includes/img/washrooms-logo.png">
+                <div class="washroom-about" style="overflow-y:scroll">
+                    
+                </div>
+            </div> 
         </div>
     </div>
 </section>
+
 
 <script>
 function myMap() {
@@ -75,8 +79,23 @@ function myMap() {
 }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1zlFVFKWA7O_UY60lpgmn5mRrS4Lmvqg&callback=myMap"></script>
+<!--
+<script>
+      function myMap() {
+          var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+          var mapCanvas = document.getElementById("map");
+          var mapOptions = {center: myCenter, zoom: 16};
+          var map = new google.maps.Map(mapCanvas, mapOptions);
+          map.setCenter(new google.maps.LatLng(43.663570, -79.395531), 13);
+          var marker = new google.maps.Marker({position:myCenter});
+          marker.setMap(map);
+          infowindow.open(map,marker);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1zlFVFKWA7O_UY60lpgmn5mRrS4Lmvqg&callback=Map">
+    </script>-->
 <script src="includes/js/jquery-1.11.1.min.js"></script>
 <script src="includes/js/owl.carousel.js"></script>
 <script src="includes/js/lightbox.min.js"></script>

@@ -1,6 +1,8 @@
 var express=require('express');
 var nodemailer = require("nodemailer");
 var app=express();
+var router = express.Router();
+var path = '../../UofTHacks17-JSabJmeRy/';
 /*
     Here we are configuring our SMTP Server details.
     STMP is mail server which is responsible for sending and recieving email.
@@ -16,10 +18,41 @@ var rand,mailOptions,host,link;
 /*------------------SMTP Over-----------------------------*/
 
 /*------------------Routing Started ------------------------*/
+router.use(function (req,res,next) {
+  console.log("/" + req.method);
+  next();
+});
+
+app.use("/",router);
 
 app.get('/',function(req,res){
-    res.sendfile('index.html', {'root': "../../"});
+    res.sendFile('index.html', {'root': "../../"});
 });
+
+app.get('/index.html',function(req,res){
+    res.sendFile('index.html', {'root': "../../"});
+});
+
+app.get('/index-forgot.html',function(req,res){
+    res.sendFile('index-forgot.html', {'root': "../../"});
+});
+
+app.get('/index-login.html',function(req,res){
+    res.sendFile('index-login.html', {'root': "../../"});
+});
+
+app.get('/index-main.html',function(req,res){
+    res.sendFile('index-main.html', {'root': "../../"});
+});
+
+app.get('/index-need-poop.html',function(req,res){
+    res.sendFile('index-need-poop.html', {'root': "../../"});
+});
+
+app.get('/index-register.html',function(req,res){
+    res.sendFile('index-register.html', {'root': "../../"});
+});
+
 app.get('/send',function(req,res){
         rand=Math.floor((Math.random() * 100) + 54);
     host=req.get('host');
@@ -28,7 +61,7 @@ app.get('/send',function(req,res){
         to : req.query.to,
         subject : "Please confirm your Email account",
         html : "Hello,<br> Please Click on the link to verify your email.<br><a href="+link+">Click here to verify</a>"
-    }
+    };
     console.log(mailOptions);
     smtpTransport.sendMail(mailOptions, function(error, response){
      if(error){

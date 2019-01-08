@@ -1,5 +1,5 @@
-# UofTHacks17-JSabJmeRy
-hehehe let's build some goofy ddong
+# poopnplop
 
-# === Ideas ===
+Use poopnplop to find the best washroom near you!
 
+Created for UofTHacks 2017.
